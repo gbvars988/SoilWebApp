@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
   faInfoCircle,
-  faContactCard,
+  faEnvelope,
   faDollarSign,
   faUserPlus,
 } from "@fortawesome/free-solid-svg-icons";
@@ -16,38 +16,35 @@ const Navbar = () => {
       <Link className="soil-logo" to="/">
         <img src={Logo} alt="Soil Logo" />
       </Link>
-      <nav>
-        <div className="nav-bar nav-middle">
-          <NavLink to="/">
-            <FontAwesomeIcon icon={faHome} className="nav-icon" />
-            <span>Home</span>
-          </NavLink>
+      <nav className="nav-middle">
+        <NavLink to="/">
+          <FontAwesomeIcon icon={faHome} className="nav-icon" />
+          <span>Home</span>
+        </NavLink>
 
-          <NavLink to="/about">
-            <FontAwesomeIcon icon={faInfoCircle} className="nav-icon" />
-            <span>About Us</span>
-          </NavLink>
+        <NavLink to="/about">
+          <FontAwesomeIcon icon={faInfoCircle} className="nav-icon" />
+          <span>About Us</span>
+        </NavLink>
 
-          <NavLink to="/deals">
-            <FontAwesomeIcon icon={faDollarSign} className="nav-icon" />
-            <span>Organic Deals</span>
-          </NavLink>
+        <NavLink to="/deals">
+          <FontAwesomeIcon icon={faDollarSign} className="nav-icon" />
+          <span>Organic Deals</span>
+        </NavLink>
 
-          <NavLink to="/contact">
-            <FontAwesomeIcon icon={faContactCard} className="nav-icon" />
-            <span>Contact Us</span>
-          </NavLink>
-        </div>
-        <div className="login-container">
-          <NavLink to="/login">
-            <FontAwesomeIcon icon={faUserPlus} />
-            <span>Login</span>
-          </NavLink>
-          <NavLink to="/signup">
-            <FontAwesomeIcon icon={faUserPlus} />
-            <span>Sign up</span>
-          </NavLink>
-        </div>
+        <NavLink to="/contact">
+          <FontAwesomeIcon icon={faEnvelope} className="nav-icon" />
+          <span>Contact Us</span>
+        </NavLink>
+      </nav>
+
+      <nav className="nav-login">
+        <NavLink to="/login">
+          <span>Login</span>
+        </NavLink>
+        <NavLink to="/signup">
+          <span>Signup</span>
+        </NavLink>
       </nav>
     </div>
   );
