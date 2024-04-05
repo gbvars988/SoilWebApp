@@ -7,12 +7,9 @@ import Content from "../Content";
 function Home() {
   return (
     <div>
-      <Header />
-      <Navbar />
       <div>
         <Content />
       </div>
-      <Footer />
     </div>
   );
 }
