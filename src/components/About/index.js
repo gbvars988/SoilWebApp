@@ -5,7 +5,7 @@ function Deals() {
   return (
     <div>
       <Navbar />
-      <h1>Deals</h1>
+      <h1>About</h1>
     </div>
   );
 }

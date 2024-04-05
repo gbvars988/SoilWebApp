@@ -1,0 +1,47 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.nav-bar {
+  display: flex;
+  background-color: #f5f5f5;
+}
+
+.nav-bar img {
+  width: 15vh;
+  height: auto;
+}
+
+.nav-icon {
+  margin: 0 10px;
+  color: var(--forest-green);
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+}
+
+nav a {
+  margin: 0 10px;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  color: var(--forest-green);
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: var(--grey);
+}
+
+@media screen and (max-width: 900px) {
+  .nav-icon,
+  nav a {
+    display: none;
+  }
+}
