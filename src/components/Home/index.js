@@ -1,11 +1,11 @@
 import React from "react";
+import Navbar from "../Navbar";
 
 function Home() {
   return (
     <div>
-      <h1>SOIL</h1>
-      <p>Test commit</p>
-      <p>Test commit 2</p>
+      <Navbar />
+      <h1> Home </h1>
     </div>
   );
 }

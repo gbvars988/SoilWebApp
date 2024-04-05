@@ -1,13 +1,26 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Colours */
+:root {
+  --fern-green: rgb(75, 127, 82);
+  --mantis: rgb(125, 209, 129);
+  --celadon: rgb(150, 232, 188);
+  --yellow-green: rgb(149, 198, 35);
+  --forest-green: rgb(19, 138, 54);
+  --orange: rgb(238, 118, 14);
+  --white: rgba(253, 249, 249, 0.952);
 }
 
+/* Default styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif, "Quicksand";
+  src: url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--celadon);
+}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
