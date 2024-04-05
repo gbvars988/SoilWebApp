@@ -1,11 +1,18 @@
 import React from "react";
+import Header from "../Header";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
+import Content from "../Content";
 
 function Home() {
   return (
     <div>
-      <h1>SOIL</h1>
-      <p>Test commit</p>
-      <p>Test commit 2</p>
+      <Header />
+      <Navbar />
+      <div>
+        <Content />
+      </div>
+      <Footer />
     </div>
   );
 }
