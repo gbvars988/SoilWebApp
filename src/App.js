@@ -5,7 +5,7 @@ import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Signin from "./components/Signin/index.js";
+import Signin from "./components/Signin/Signin";
 
 function App() {
   return (
