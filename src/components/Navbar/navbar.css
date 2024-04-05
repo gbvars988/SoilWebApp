@@ -6,10 +6,6 @@ nav {
   margin-right: 20px;
 }
 
-.nav-middle {
-  display: flex;
-  justify-content: center;
-}
 .nav-bar {
   display: flex;
   background-color: var(--white);
@@ -27,8 +23,7 @@ nav {
 
 .nav-login {
   display: flex;
-  justify-content: flex-end;
-  width: 5%;
+  width: 15%;
   flex-direction: row;
 }
 
@@ -47,7 +42,7 @@ nav a:hover {
   border-radius: 7em;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .nav-icon,
   nav a {
     display: none;

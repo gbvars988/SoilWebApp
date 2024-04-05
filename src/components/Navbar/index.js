@@ -7,7 +7,6 @@ import {
   faInfoCircle,
   faEnvelope,
   faDollarSign,
-  faUserPlus,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
@@ -16,7 +15,7 @@ const Navbar = () => {
       <Link className="soil-logo" to="/">
         <img src={Logo} alt="Soil Logo" />
       </Link>
-      <nav className="nav-middle">
+      <nav>
         <NavLink to="/">
           <FontAwesomeIcon icon={faHome} className="nav-icon" />
           <span>Home</span>

@@ -1,0 +1,13 @@
+.footer-container {
+  background-color: var(--white);
+  display: flex;
+  height: 10vh;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 15vh;
+  height: auto;
+}

@@ -6,7 +6,10 @@
   --yellow-green: rgb(149, 198, 35);
   --forest-green: rgb(19, 138, 54);
   --orange: rgb(238, 118, 14);
-  --white: rgba(253, 249, 249, 0.952);
+  --white: rgb(253, 249, 249);
+  --brown: rgb(192, 127, 81);
+  --color1: hsla(148, 64%, 75%, 1);
+  --color2: hsla(25, 47%, 54%, 1);
 }
 
 /* Default styles */
