@@ -1,3 +1,4 @@
+/* Header/logo Title */
 .header {
   padding: 40px;
   text-align: left;
@@ -5,12 +6,14 @@
   color: #f6f4f9;
 }
 
+/* Top navigation bar styling */
 .navbar {
   overflow: hidden;
   background-color: #333;
   padding: 5px; 
 }
 
+/* Navbar links */
 .navbar a {
   float: left;
   display: block;
@@ -20,14 +23,29 @@
   text-decoration: none;
 }
 
+/* Navbar right-most link */
 .navbar a.right {
   float: right; 
 }
 
+/* Navbar on hover styling */
+.navbar a:hover {
+  background-color: #269faf;
+}
+
+/* Footer styling */
 .footer {
   background-color: #333;
   padding: 10px;
   text-align: center;
+}
+
+/* Main content styling */
+.main {
+  background-color: white;
+  padding: 20px;
+  flex: 70%;
+  -ms-flex: 70%;
 }
 
 

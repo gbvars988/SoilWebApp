@@ -2,7 +2,7 @@ import React from "react"
 
 function Content () {
     return (
-        <div>
+        <div className="main">
             <p>content placeholder</p>
             <h1>SOIL</h1>
             <p>Test commit</p>
