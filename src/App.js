@@ -12,12 +12,6 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route index element={<Home />} />)
-        <Route path="home" element={<Home />} />)
-        <Route path="about" element={<About />} />)
-        <Route path="deals" element={<Deals />} />)
-        <Route path="contact" element={<Contact />} />)
-        <Route path="login" element={<Login />} />)
-        <Route path="signup" element={<Signup />} />)
       </Routes>
     </BrowserRouter>
   );
