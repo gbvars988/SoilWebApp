@@ -1,15 +1,18 @@
 import React from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import "./about.css";
 
-function Deals() {
+function About() {
   return (
     <div>
       <Navbar />
-      <h1>About</h1>
+      <div className="about-container">
+        <h1>About</h1>
+      </div>
       <Footer />
     </div>
   );
 }
 
-export default Deals;
+export default About;

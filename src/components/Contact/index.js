@@ -1,11 +1,16 @@
 import React from "react";
 import Navbar from "../Navbar";
+import Footer from "../Footer";
+import "./contact.css";
 
 function Contact() {
   return (
     <div>
       <Navbar />
-      <h1> Contact </h1>
+      <div className="contact-container">
+        <h1>Contact</h1>
+      </div>
+      <Footer />
     </div>
   );
 }

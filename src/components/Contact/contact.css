@@ -1,0 +1,6 @@
+.contact-container {
+  display: flex;
+  height: 90vh;
+  width: auto;
+  background-color: var(--celadon);
+}
