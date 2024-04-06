@@ -42,6 +42,17 @@ nav a:hover {
   border-radius: 7em;
 }
 
+.signup-button {
+  background-color: var(--mantis);
+  border-radius: 1em;
+}
+
+.signup-button:hover {
+  background-color: var(--mantis);
+  border-radius: 15em;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 1000px) {
   .nav-icon,
   nav a {

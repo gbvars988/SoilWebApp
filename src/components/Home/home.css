@@ -1,5 +1,9 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
+body {
+  background-color: var(--brown);
+}
+
 .image-container {
   width: 100%;
   height: auto;
