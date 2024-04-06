@@ -1,4 +1,10 @@
 .footer-container {
+  p {
+    font-size: 1em;
+    color: var(--black);
+    text-align: center;
+    font-family: "Tilt Neon", sans-serif;
+  }
   background-color: var(--white);
   display: flex;
   height: 10vh;
