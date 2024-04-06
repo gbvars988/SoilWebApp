@@ -28,14 +28,8 @@ function Home() {
       </div>
       <div className="container-bg">
         <div className="home-content">
-          <h1>Welcome to Soil!</h1>
+          <h1>Welcome to Soil</h1>
           <h2> Our values </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            auctor, nisl et posuere tincidunt, nunc eros ultricies purus, nec
-            lacinia dui purus id nunc. Nullam auctor, nisl et posuere tincidunt,
-            nunc eros ultricies purus, nec lacinia dui purus id nunc.
-          </p>
         </div>
       </div>
 
