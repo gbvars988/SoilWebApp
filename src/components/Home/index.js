@@ -1,6 +1,4 @@
 import React from "react";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
 import "./home.css";
 import ImageGallery from "react-image-gallery";
 import OrganicImage1 from "../../assets/organic-1.jpg";
