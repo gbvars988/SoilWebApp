@@ -1,8 +1,4 @@
-body {
-  background-color: var(--white);
-}
-
-.signup-bg {
+.login-bg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +6,7 @@ body {
   height: 81.5vh;
 }
 
-.signup-container {
+.login-container {
   display: flex;
   justify-content: center;
   align-items: center;
