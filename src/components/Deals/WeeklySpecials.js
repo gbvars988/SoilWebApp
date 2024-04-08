@@ -1,20 +1,23 @@
-import { React, useState } from 'react';
-import { getSpecials } from '../../data/specialsrepository';
+import React from 'react';
+import './weeklyspecials.css'
+import Eggs from '../../assets/eggs.jpg'
 
-function WeeklySpecials() {
-  const [specials, setSpecials] = useState(getSpecials()); 
-  console.log(specials);
+function WeeklySpecials(props) {
 
   return (
-    <div className="specials-container">
-      <ul>
-        {specials.map((item) => (
-          <li key={item.id}>
-            {item.product} : {item.price}
+    <div className="specials-container-bg">
+      <h1>Weekly Specials</h1>
+        <ul className="specials-container">
+          {props.specials.map((item) => (
+            <li className="specials-item" key={item.id}>
+              <h3>{item.product}</h3>
+              <p>{item.price}</p>
+              <img src={Eggs}></img>
             </li>
-        ))}
-      </ul>
+          ))}
+        </ul>
     </div>
+
   )
 }
 

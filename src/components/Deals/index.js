@@ -1,14 +1,16 @@
-import React from "react";
+import { React, useState } from "react";
+import { getSpecials } from '../../data/specialsrepository';
 import "./deals.css";
 import WeeklySpecials from "./WeeklySpecials";
 
 function Deals() {
+  const [specials, setSpecials] = useState(getSpecials()); 
+
   return (
     <div>
       <div className="deals-container">
-        <h1>Deals</h1>
         <div>
-        <WeeklySpecials />
+        <WeeklySpecials specials={specials}/>
         </div>
       </div>
     </div>

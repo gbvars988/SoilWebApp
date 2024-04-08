@@ -1,6 +1,9 @@
 .deals-container {
   display: flex;
-  height: 90vh;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
   width: auto;
   background-color: var(--celadon);
+  padding: 2vh 0;
 }
