@@ -1,6 +1,6 @@
 import "./navbar.css";
 import { Link, NavLink } from "react-router-dom";
-import Logo from "../../assets/soil-logo.png";
+import Logo from "../../Assets/soil-logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
