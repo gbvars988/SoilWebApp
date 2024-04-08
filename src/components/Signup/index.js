@@ -5,7 +5,6 @@ import "./signup.css";
 function Signup() {
   return (
     <div>
-      <Navbar />
       <h1> Signup </h1>
       <p>
         The Signup component will present a form with name, email, and password
