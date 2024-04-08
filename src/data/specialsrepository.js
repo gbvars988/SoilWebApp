@@ -10,12 +10,14 @@ function initSpecials() {
     {
       product: "Free-range eggs", 
       price: "$2",
-      id: 0
+      id: 0,
+      img_name: "eggs"
     },
     {
       product: "Organic tomato", 
       price: "$1",
-      id: 1
+      id: 1,
+      img_name: "tomato"
       }
   ];
 

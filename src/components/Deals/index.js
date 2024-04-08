@@ -10,7 +10,7 @@ function Deals() {
     <div>
       <div className="deals-container">
         <div>
-        <WeeklySpecials specials={specials}/>
+        <WeeklySpecials specials={specials} />
         </div>
       </div>
     </div>
