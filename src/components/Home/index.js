@@ -27,7 +27,6 @@ const images = [
 function Home() {
   return (
     <div>
-      <Navbar />
       <div className="image-container">
         <ImageGallery items={images} />
       </div>
@@ -78,7 +77,6 @@ function Home() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

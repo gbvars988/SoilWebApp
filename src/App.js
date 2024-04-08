@@ -6,10 +6,13 @@ import Deals from "./components/Deals";
 import Contact from "./components/Contact";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route index element={<Home />} />)
         <Route path="home" element={<Home />} />)
@@ -19,6 +22,7 @@ function App() {
         <Route path="login" element={<Login />} />)
         <Route path="signup" element={<Signup />} />)
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

@@ -6,11 +6,9 @@ import "./about.css";
 function About() {
   return (
     <div>
-      <Navbar />
       <div className="about-container">
         <h1>About</h1>
       </div>
-      <Footer />
     </div>
   );
 }
