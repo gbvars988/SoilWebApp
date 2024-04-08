@@ -1,5 +1,5 @@
 import "./footer.css";
-import Logo from "../../assets/soil-logo.png";
+import Logo from "../../Assets/soil-logo.png";
 
 function Footer() {
   return (

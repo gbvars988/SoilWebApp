@@ -1,14 +1,14 @@
 import React from "react";
 import "./home.css";
 import ImageGallery from "react-image-gallery";
-import OrganicImage1 from "../../assets/organic-1.jpg";
-import OrganicImage2 from "../../assets/organic-2.jpg";
-import OrganicImage3 from "../../assets/organic-3.jpg";
-import HomeImage1 from "../../assets/home-1.jpg";
-import HomeImage2 from "../../assets/home-2.jpg";
-import HomeImage3 from "../../assets/home-3.jpg";
-import HomeImage4 from "../../assets/home-4.jpg";
-import HomeImage5 from "../../assets/home-5.jpg";
+import OrganicImage1 from "../../Assets/organic-1.jpg";
+import OrganicImage2 from "../../Assets/organic-2.jpg";
+import OrganicImage3 from "../../Assets/organic-3.jpg";
+import HomeImage1 from "../../Assets/home-1.jpg";
+import HomeImage2 from "../../Assets/home-2.jpg";
+import HomeImage3 from "../../Assets/home-3.jpg";
+import HomeImage4 from "../../Assets/home-4.jpg";
+import HomeImage5 from "../../Assets/home-5.jpg";
 
 const images = [
   {
