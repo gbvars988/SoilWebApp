@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import "./signup.css";
+import SignupValidation from "./SignupValidation";
 
 function Form() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [signupSuccess, setSignupSuccess] = useState(false);
-  const [error, setError] = useState("");
+  const [errors, setErrors] = useState({});
 
   // Function to handle Signup
   const handleSignup = () => {
-    if (!name || !email || !password) {
-      setError("Please fill in all fields.");
+    // Validate the form fields
+    const validationErrors = SignupValidation({ email, password });
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
       return;
     }
 
@@ -38,7 +41,7 @@ function Form() {
     setName("");
     setEmail("");
     setPassword("");
-    setError("");
+    setErrors({});
   };
 
   return (
@@ -57,27 +60,30 @@ function Form() {
         <div>
           <label className="label-text">Email:</label>
           <input
-            className="input-field"
+            className={`input-field ${errors.email && "is-danger"}`} // Add is-danger class if there's an error
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
+          {errors.email && <p>{errors.email}</p>}
         </div>
         <div>
           <label className="label-text">Password:</label>
           <input
-            className="input-field"
+            className={`input-field ${errors.password && "is-danger"}`} // Add is-danger class if there's an error
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          {errors.password && (
+            <p className="help is-danger">{errors.password}</p>
+          )}
         </div>
         <button className="submit-button" type="button" onClick={handleSignup}>
           Sign Up
         </button>
       </form>
       {signupSuccess && <p>Signup successful!</p>}
-      {error && <p className="error">{error}</p>}
     </div>
   );
 }

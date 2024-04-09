@@ -19,14 +19,16 @@
 .form-container {
   h1 {
     color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.input-field {
+.input {
   width: 100%;
   margin: 10px 0;
   padding: 10px;
