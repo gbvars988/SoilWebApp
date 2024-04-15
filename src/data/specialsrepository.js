@@ -53,7 +53,7 @@ function initSpecials() {
       price: 3.5,
       id: 6,
       img_name: "spinach",
-      info: "uper nutritional english spinach direct from the farm.",
+      info: "Super nutritional english spinach direct from the farm.",
     },
     {
       product: "Zucchini Organic",
