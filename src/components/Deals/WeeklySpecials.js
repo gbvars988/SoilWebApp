@@ -46,7 +46,7 @@ function WeeklySpecials(props) {
             onClick={() => handleItemClick(item)}
           >
             <h3>{item.product}</h3>
-            <p>{item.price}</p>
+            <p>${item.price}</p>
             <img src={imageMap[item.img_name]}></img>
           </li>
         ))}
