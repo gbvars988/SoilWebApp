@@ -1,15 +1,15 @@
 import { React, useState } from "react";
 import "./weeklyspecials.css";
-import Eggs from "../../assets/eggs.jpg";
-import Tomato from "../../assets/tomato.jpg";
-import Zucchini from "../../assets/zucchini.jpg";
-import Pear from "../../assets/pear.jpg";
-import Honeydew from "../../assets/honeydew.jpg";
-import Spinach from "../../assets/spinach.jpg";
-import Mushroom from "../../assets/mushroom.jpg";
-import Potato from "../../assets/potato.jpg";
-import Pumpkin from "../../assets/pumpkin.jpg";
-import Asparagus from "../../assets/asparagus.jpg";
+import Eggs from "../../Assets/eggs.jpg";
+import Tomato from "../../Assets/tomato.jpg";
+import Zucchini from "../../Assets/zucchini.jpg";
+import Pear from "../../Assets/pear.jpg";
+import Honeydew from "../../Assets/honeydew.jpg";
+import Spinach from "../../Assets/spinach.jpg";
+import Mushroom from "../../Assets/mushroom.jpg";
+import Potato from "../../Assets/potato.jpg";
+import Pumpkin from "../../Assets/pumpkin.jpg";
+import Asparagus from "../../Assets/asparagus.jpg";
 import Modal from "./Modal";
 
 function WeeklySpecials(props) {
