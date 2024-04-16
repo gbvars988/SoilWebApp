@@ -11,6 +11,7 @@ import Potato from "../../Assets/potato.jpg";
 import Pumpkin from "../../Assets/pumpkin.jpg";
 import Asparagus from "../../Assets/asparagus.jpg";
 import Modal from "./Modal";
+import { useCart } from "../Cart/CartContext.js";
 
 function WeeklySpecials(props) {
   const imageMap = {
@@ -25,6 +26,8 @@ function WeeklySpecials(props) {
     pumpkin: Pumpkin,
     asparagus: Asparagus,
   };
+  const { addToCart } = useCart();
+
   const [selectedItem, setSelectedItem] = useState(null);
 
   const handleItemClick = (item) => {
@@ -37,7 +40,6 @@ function WeeklySpecials(props) {
 
   const handleAddToCart = (e) => {
     e.stopPropagation();
-    alert("item added to cart");
   };
 
   return (
@@ -53,7 +55,7 @@ function WeeklySpecials(props) {
             <h3>{item.product}</h3>
             <p>${item.price}</p>
             <img src={imageMap[item.img_name]}></img>
-            <button onClick={(e) => handleAddToCart(e)}>Add to cart</button>
+            <button onClick={() => addToCart(item.id)}>Add to cart</button>
           </li>
         ))}
       </ul>
