@@ -35,6 +35,11 @@ function WeeklySpecials(props) {
     setSelectedItem(null);
   };
 
+  const handleAddToCart = (e) => {
+    e.stopPropagation();
+    alert("item added to cart");
+  };
+
   return (
     <div className="specials-container-bg">
       <h1>Weekly Specials</h1>
@@ -48,12 +53,10 @@ function WeeklySpecials(props) {
             <h3>{item.product}</h3>
             <p>${item.price}</p>
             <img src={imageMap[item.img_name]}></img>
+            <button onClick={(e) => handleAddToCart(e)}>Add to cart</button>
           </li>
         ))}
       </ul>
-      {/* {selectedItem !== null && (
-        <Modal isOpen={selectedItem !== null} onClose={handleCloseModal} />
-      )} */}
       <Modal isOpen={selectedItem !== null} onClose={handleCloseModal}>
         {selectedItem && (
           <div>
