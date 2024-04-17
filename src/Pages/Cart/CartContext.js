@@ -19,7 +19,6 @@ const CartProvider = ({ children }) => {
 
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
-    console.log("something happened");
   };
 
   const removeFromCart = (itemId) => {
