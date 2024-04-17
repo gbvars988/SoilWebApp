@@ -15,6 +15,7 @@
   flex-direction: row;
   border-radius: 1em;
   background-color: var(--mantis);
+  width: 30%;
   img {
     height: 10vh;
     width: auto;

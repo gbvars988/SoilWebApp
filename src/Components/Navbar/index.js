@@ -7,6 +7,7 @@ import {
   faInfoCircle,
   faEnvelope,
   faDollarSign,
+  faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
@@ -43,6 +44,10 @@ const Navbar = () => {
         </NavLink>
         <NavLink to="/signup" className="signup-button">
           <span>Signup</span>
+        </NavLink>
+        <NavLink to="/cart">
+          <FontAwesomeIcon icon={faShoppingCart} className="nav-icon" />
+          <span>Cart</span>
         </NavLink>
       </nav>
     </div>
