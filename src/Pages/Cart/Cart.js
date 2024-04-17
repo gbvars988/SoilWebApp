@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useCart } from "./CartContext";
 import { getSpecials } from "../../Data/specialsrepository.js";
 import CartItem from "./CartItem.js";
+import "./Cart.css";
 
 function Cart() {
   const [specials, setSpecials] = useState(getSpecials());
@@ -24,8 +25,10 @@ function Cart() {
           }
         })}
       </div>
-      <button onClick={handleContinueShopping}>Continue Shopping</button>
-      <button>Checkout</button>
+      <button className="checkout" onClick={handleContinueShopping}>
+        Continue Shopping
+      </button>
+      <button className="checkout">Checkout</button>
     </div>
   );
 }
