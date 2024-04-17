@@ -7,6 +7,7 @@ import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Cart from "./Pages/Cart/Cart.js";
+import CheckoutForm from "./Pages/Cart/CheckoutForm.js";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import { CartProvider } from "./Pages/Cart/CartContext.js";
@@ -25,6 +26,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="checkout" element={<CheckoutForm />} />
         </Routes>
       </CartProvider>
       <Footer />

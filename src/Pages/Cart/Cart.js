@@ -15,8 +15,8 @@ function Cart() {
     const updateSubtotal = () => {
       let newTotal = 0;
       for (const id in cartItems) {
-        let itemPrice = specials.find((special) => special.id === Number(id));
-        newTotal += cartItems[id] * itemPrice.price;
+        let item = specials.find((special) => special.id === Number(id));
+        newTotal += cartItems[id] * item.price;
       }
       return newTotal;
     };
@@ -25,6 +25,10 @@ function Cart() {
 
   const handleContinueShopping = () => {
     navigate("/deals");
+  };
+
+  const handleCheckout = () => {
+    navigate("/checkout");
   };
 
   return (
@@ -43,7 +47,9 @@ function Cart() {
       <button className="checkout" onClick={handleContinueShopping}>
         Continue Shopping
       </button>
-      <button className="checkout">Checkout</button>
+      <button className="checkout" onClick={handleCheckout}>
+        Checkout
+      </button>
     </div>
   );
 }
