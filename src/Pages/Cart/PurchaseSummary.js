@@ -34,7 +34,7 @@ function PurchaseSummary() {
           }
         })}
       </div>
-      <>Total purchase price: ${totalAmount}</>
+      <>Total purchase price: ${totalAmount.toFixed(2)}</>
     </div>
   );
 }
