@@ -38,10 +38,11 @@ function WeeklySpecials(props) {
     setSelectedItem(null);
   };
 
-  const handleAddToCart = (e) => {
+  const handleAddToCart = (e, itemId) => {
     e.stopPropagation();
+    addToCart(itemId);
   };
-  console.log(cartItems);
+
   return (
     <div className="specials-container-bg">
       <h1>Weekly Specials</h1>
@@ -59,7 +60,7 @@ function WeeklySpecials(props) {
             <img src={imageMap[item.img_name]}></img>
             <button
               className="addToCart-btn"
-              onClick={() => addToCart(item.id)}
+              onClick={(e) => handleAddToCart(e, item.id)}
             >
               Add to cart ({cartItems[item.id]})
             </button>

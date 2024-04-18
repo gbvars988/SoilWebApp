@@ -22,7 +22,7 @@ const CartProvider = ({ children }) => {
   };
 
   const removeFromCart = (itemId) => {
-    if (cartItems[itemId] == 0) return;
+    if (cartItems[itemId] === 0) return;
 
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };
@@ -59,10 +59,12 @@ const CartProvider = ({ children }) => {
   const makePurchase = (cardNumber, expiry) => {
     if (validateCardNumber(cardNumber) && validateExpiryDate(expiry)) {
       // Proceed with the purchase
-      console.log("Purchase made successfully.");
+      // console.log("Purchase made successfully.");
+      return true;
     } else {
       // Show validation error
-      console.log("Invalid card details.");
+      alert("Invalid card details. Please check card details and try again");
+      return false;
     }
   };
 

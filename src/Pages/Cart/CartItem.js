@@ -1,4 +1,4 @@
-import { React, useContext } from "react";
+import { React } from "react";
 import "./Cart.css";
 import Eggs from "../../Assets/eggs.jpg";
 import Tomato from "../../Assets/tomato.jpg";
