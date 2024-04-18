@@ -1,0 +1,23 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  padding: 20px;
+  flex-direction: row;
+  border-radius: 1em;
+  background-color: var(--mantis);
+  width: 30%;
+  img {
+    height: 10vh;
+    width: auto;
+  }
+}
