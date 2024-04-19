@@ -1,4 +1,4 @@
-import { React, useState, useContext, createContext } from "react";
+import { React, useState, useContext, createContext, useEffect } from "react";
 import { getSpecials } from "../../Data/specialsrepository";
 
 const CartContext = createContext();
@@ -16,6 +16,10 @@ const CartProvider = ({ children }) => {
   };
 
   const [cartItems, setCartItems] = useState(initCart());
+
+  useEffect(() => {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
@@ -68,6 +72,10 @@ const CartProvider = ({ children }) => {
     }
   };
 
+  const clearCart = () => {
+    setCartItems(initCart);
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -79,6 +87,7 @@ const CartProvider = ({ children }) => {
         makePurchase,
         validateExpiryDate,
         validateCardNumber,
+        clearCart,
       }}
     >
       {children}
