@@ -57,5 +57,5 @@ If you encounter errors when generating meal plans - it is possible that the dai
 ## References
 
 - Images were sourced from [unsplash](https://unsplash.com/)
-- Meal planning and recipes utilise the Spoonacular API (free account) **NOTE**: there is a daily quota of 150 requests.
+- Meal planning and recipes utilise the [Spoonacular API](https://spoonacular.com/food-api) (free account) **NOTE**: there is a daily quota of 150 requests.
 - Meal planning functionality was inspired by [Aleks Popovic's tutorial](https://www.youtube.com/watch?v=N5or5jBstg8&t=401s&ab_channel=AleksPopovic)
