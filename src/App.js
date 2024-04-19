@@ -9,6 +9,7 @@ import Signup from "./Pages/Signup";
 import Cart from "./Pages/Cart/Cart.js";
 import CheckoutForm from "./Pages/Cart/CheckoutForm.js";
 import PurchaseSummary from "./Pages/Cart/PurchaseSummary.js";
+import DietPlanPage from "./Pages/Diet/DietPlanPage.js";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import { CartProvider } from "./Pages/Cart/CartContext.js";
@@ -29,6 +30,7 @@ function App() {
           <Route path="cart" element={<Cart />} />
           <Route path="checkout" element={<CheckoutForm />} />
           <Route path="purchasesummary" element={<PurchaseSummary />} />
+          <Route path="dietplan" element={<DietPlanPage />} />
         </Routes>
       </CartProvider>
       <Footer />

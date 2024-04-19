@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+src/Pages/Diet/ideas.txt
+src/Pages/Diet/DietPlan.js
+src/Pages/Diet/draft.js
