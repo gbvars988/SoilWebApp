@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const useMealPlan = () => {
+  const APIKEY = "517aa46934da448abfee7f81411d39ca";
   const [mealPlan, setMealPlan] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -60,7 +61,7 @@ const useMealPlan = () => {
 
     try {
       const response = await fetch(
-        `https://api.spoonacular.com/mealplanner/generate?${queryString}&apiKey=517aa46934da448abfee7f81411d39ca`
+        `https://api.spoonacular.com/mealplanner/generate?${queryString}&apiKey=${APIKEY}`
       );
       if (!response.ok) {
         throw new Error("Failed to fetch meal plan");
