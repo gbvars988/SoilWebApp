@@ -19,7 +19,7 @@ const useMealPlan = () => {
       case "overall health":
         baseCalories += 0;
         break;
-      default:
+      default: // undefined case
         break;
     }
 
@@ -54,7 +54,7 @@ const useMealPlan = () => {
     // Build query string from preferences
     const queryString = new URLSearchParams({
       timeFrame: preferences.timeFrame,
-      diet: preferences.dietaryPreferences.join(","),
+      diet: preferences.dietaryPreferences.join(","), // API can handle empty diet preference array if user does not select any\
       targetCalories: targetCalories.toString(),
     }).toString();
 
