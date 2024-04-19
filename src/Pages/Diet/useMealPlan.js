@@ -6,6 +6,7 @@ const useMealPlan = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  // Logic to distill use defined metrics into appropriate caloric intake
   const calculateTargetCalories = (preferences) => {
     let baseCalories = 2000; // Basic starting point for average adult
 
