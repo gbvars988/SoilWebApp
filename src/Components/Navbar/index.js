@@ -36,6 +36,9 @@ const Navbar = () => {
           <FontAwesomeIcon icon={faEnvelope} className="nav-icon" />
           <span>Contact Us</span>
         </NavLink>
+        <NavLink to="/dietplan">
+          <span>Diet Plan</span>
+        </NavLink>
       </nav>
 
       <nav className="nav-login">
