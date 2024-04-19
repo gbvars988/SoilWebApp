@@ -16,6 +16,6 @@ The application will be hosted locally on `localhost:3000`, assuming port 3000 i
 
 ## References
 
-- Images were sourced from unsplash.com
+- Images were sourced from [unsplash](https://unsplash.com/)
 - Meal planning and recipes utilise the Spoonacular API (free account) **NOTE**: there is a daily quota of 150 requests.
 - Meal planning functionality was inspired by [Aleks Popovic's tutorial](https://www.youtube.com/watch?v=N5or5jBstg8&t=401s&ab_channel=AleksPopovic)
