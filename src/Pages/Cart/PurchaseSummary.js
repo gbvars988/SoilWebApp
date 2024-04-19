@@ -1,9 +1,10 @@
 import { React, useState, useEffect } from "react";
-import { useCart } from "./CartContext";
 import { getSpecials } from "../../Data/specialsrepository.js";
+import { useLocation } from "react-router-dom";
 
 function PurchaseSummary() {
-  const { cartItems } = useCart();
+  const location = useLocation();
+  const { cartItems } = location.state;
   const [specials, setSpecials] = useState(getSpecials());
   const [totalAmount, setTotalAmount] = useState(0);
 

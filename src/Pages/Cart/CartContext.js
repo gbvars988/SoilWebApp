@@ -72,6 +72,10 @@ const CartProvider = ({ children }) => {
     }
   };
 
+  const clearCart = () => {
+    setCartItems(initCart);
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -83,6 +87,7 @@ const CartProvider = ({ children }) => {
         makePurchase,
         validateExpiryDate,
         validateCardNumber,
+        clearCart,
       }}
     >
       {children}
