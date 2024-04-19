@@ -16,7 +16,7 @@ function MealPlanDisplay({ mealPlan, timeFrame }) {
           <div key={meal.id}>
             <p>{meal.title}</p>
             <img
-              src={`https://spoonacular.com/recipeImages/${meal.id}-312x231.${meal.imageType}`}
+              src={`https://img.spoonacular.com/recipes/${meal.id}-312x231.${meal.imageType}`}
               alt={meal.title}
             />
             <p>Ready in: {meal.readyInMinutes} minutes</p>
@@ -43,7 +43,7 @@ function MealPlanDisplay({ mealPlan, timeFrame }) {
               <div key={meal.id}>
                 <p>{meal.title}</p>
                 <img
-                  src={`https://spoonacular.com/recipeImages/${meal.id}-312x231.${meal.imageType}`}
+                  src={`https://img.spoonacular.com/recipes/${meal.id}-312x231.${meal.imageType}`}
                   alt={meal.title}
                 />
                 <p>Ready in: {meal.readyInMinutes} minutes</p>
