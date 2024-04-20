@@ -8,7 +8,7 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Profile from "./Pages/Profile";
 import Cart from "./Pages/Cart/Cart.js";
-import CheckoutForm from "./Pages/Cart/CheckoutForm.js";
+import Checkout from "./Pages/Cart/Checkout.js";
 import PurchaseSummary from "./Pages/Cart/PurchaseSummary.js";
 import DietPlanPage from "./Pages/Diet/DietPlanPage.js";
 import Navbar from "./Components/Navbar";
@@ -30,7 +30,7 @@ function App() {
           <Route path="signup" element={<Signup />} />
           <Route path="profile" element={<Profile />} />
           <Route path="cart" element={<Cart />} />
-          <Route path="checkout" element={<CheckoutForm />} />
+          <Route path="checkout" element={<Checkout />} />
           <Route path="purchasesummary" element={<PurchaseSummary />} />
           <Route path="dietplan" element={<DietPlanPage />} />
         </Routes>

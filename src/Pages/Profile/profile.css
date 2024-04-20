@@ -66,6 +66,12 @@
   margin-bottom: -1vh;
 }
 
+.edit-text {
+  width: 100%;
+  height: 6vh;
+  margin-bottom: -3vh;
+}
+
 .email-text {
   width: 100%;
   height: 6vh;

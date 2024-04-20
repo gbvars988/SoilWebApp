@@ -1,5 +1,5 @@
 import { React } from "react";
-import "./Cart.css";
+import "./cart.css";
 import Eggs from "../../Assets/eggs.jpg";
 import Tomato from "../../Assets/tomato.jpg";
 import Zucchini from "../../Assets/zucchini.jpg";

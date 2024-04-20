@@ -1,9 +1,9 @@
 import { React, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useCart } from "./CartContext";
+import { useCart } from "./CartContext.js";
 import { getSpecials } from "../../Data/specialsrepository.js";
 import CartItem from "./CartItem.js";
-import "./Cart.css";
+import "./cart.css";
 
 function Cart() {
   const [specials, setSpecials] = useState(getSpecials());
