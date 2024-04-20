@@ -1,5 +1,6 @@
 import "./navbar.css";
 import { Link, NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Logo from "../../Assets/soil-logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,9 +9,29 @@ import {
   faEnvelope,
   faDollarSign,
   faShoppingCart,
+  faUtensils,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [name, setName] = useState("");
+
+  useEffect(() => {
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (loggedInUser) {
+      setName(loggedInUser.name);
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    // Clear user data from local storage
+    localStorage.removeItem("loggedInUser");
+    // Update login state
+    setIsLoggedIn(false);
+    window.location.href = "/";
+  };
+
   return (
     <div className="nav-bar">
       <Link className="soil-logo" to="/">
@@ -37,17 +58,30 @@ const Navbar = () => {
           <span>Contact Us</span>
         </NavLink>
         <NavLink to="/dietplan">
+          <FontAwesomeIcon icon={faUtensils} className="nav-icon" />
           <span>Diet Plan</span>
         </NavLink>
       </nav>
-
       <nav className="nav-login">
-        <NavLink to="/login">
-          <span>Login</span>
-        </NavLink>
-        <NavLink to="/signup" className="signup-button">
-          <span>Signup</span>
-        </NavLink>
+        {isLoggedIn ? (
+          <>
+            <NavLink to="/profile">
+              <span>{name}'s Profile</span>
+            </NavLink>
+            <button className="logout-button" onClick={handleLogout}>
+              Log Out
+            </button>
+          </>
+        ) : (
+          <>
+            <NavLink to="/login">
+              <span>Login</span>
+            </NavLink>
+            <NavLink to="/signup" className="signup-button">
+              <span>Signup</span>
+            </NavLink>
+          </>
+        )}
         <NavLink to="/cart">
           <FontAwesomeIcon icon={faShoppingCart} className="nav-icon" />
           <span>Cart</span>

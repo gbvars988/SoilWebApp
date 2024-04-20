@@ -37,11 +37,9 @@ function Form() {
     // Set signup success message
     setSignupSuccess(true);
 
-    // Clear the form fields after saving
-    setName("");
-    setEmail("");
-    setPassword("");
-    setErrors({});
+    localStorage.setItem("loggedInUser", JSON.stringify(newUser));
+
+    window.location.href = "/profile";
   };
 
   return (
@@ -60,7 +58,7 @@ function Form() {
         <div>
           <label className="label-text">Email:</label>
           <input
-            className={`input-field ${errors.email && "is-danger"}`} // Add is-danger class if there's an error
+            className={`input-field ${errors.email && "is-danger"}`}
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -70,7 +68,7 @@ function Form() {
         <div>
           <label className="label-text">Password:</label>
           <input
-            className={`input-field ${errors.password && "is-danger"}`} // Add is-danger class if there's an error
+            className={`input-field ${errors.password && "is-danger"}`}
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}

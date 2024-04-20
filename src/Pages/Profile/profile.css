@@ -1,0 +1,16 @@
+.profile-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--brown);
+  height: 81.5vh;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  background-color: var(--maroon);
+  width: 50%;
+  height: 50vh;
+  border-radius: 10px;
+}

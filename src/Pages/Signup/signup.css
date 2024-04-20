@@ -16,7 +16,7 @@ body {
   align-items: center;
   width: 40%;
   height: 60vh;
-  background-color: #8b5c5c;
+  background-color: var(--maroon);
   border-radius: 3em;
 }
 

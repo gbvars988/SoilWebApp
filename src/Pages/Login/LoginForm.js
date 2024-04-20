@@ -1,6 +1,7 @@
 import React from "react";
 import "./login.css";
 import LoginValidation from "./LoginValidation";
+import { useNavigate } from "react-router-dom";
 import useForm from "./useForm";
 
 const LoginForm = () => {
@@ -8,16 +9,19 @@ const LoginForm = () => {
     login,
     LoginValidation
   );
+  const navigate = useNavigate();
 
   function login() {
-    console.log("No errors, submit callback called!");
     const users = JSON.parse(localStorage.getItem("users")) || [];
     const user = users.find(
       (user) => user.email === values.email && user.password === values.password
     );
-    if (!user) {
+
+    if (user) {
+      localStorage.setItem("loggedInUser", JSON.stringify(user));
+      window.location.href = "/profile";
+    } else {
       alert("Please enter a valid Soil account email and password.");
-      return;
     }
   }
 

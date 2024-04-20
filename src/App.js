@@ -6,6 +6,7 @@ import Deals from "./Pages/Deals";
 import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
+import Profile from "./Pages/Profile";
 import Cart from "./Pages/Cart/Cart.js";
 import CheckoutForm from "./Pages/Cart/CheckoutForm.js";
 import PurchaseSummary from "./Pages/Cart/PurchaseSummary.js";
@@ -27,6 +28,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
+          <Route path="profile" element={<Profile />} />
           <Route path="cart" element={<Cart />} />
           <Route path="checkout" element={<CheckoutForm />} />
           <Route path="purchasesummary" element={<PurchaseSummary />} />
