@@ -51,18 +51,23 @@ const Navbar = () => {
           <span>About Us</span>
         </NavLink>
 
-        <NavLink to="/deals">
-          <FontAwesomeIcon icon={faDollarSign} className="nav-icon" />
-          <span>Organic Deals</span>
-        </NavLink>
+        {isLoggedIn && (
+          <>
+            <NavLink to="/deals">
+              <FontAwesomeIcon icon={faDollarSign} className="nav-icon" />
+              <span>Organic Deals</span>
+            </NavLink>
+
+            <NavLink to="/dietplan">
+              <FontAwesomeIcon icon={faUtensils} className="nav-icon" />
+              <span>Diet Plan</span>
+            </NavLink>
+          </>
+        )}
 
         <NavLink to="/contact">
           <FontAwesomeIcon icon={faEnvelope} className="nav-icon" />
           <span>Contact Us</span>
-        </NavLink>
-        <NavLink to="/dietplan">
-          <FontAwesomeIcon icon={faUtensils} className="nav-icon" />
-          <span>Diet Plan</span>
         </NavLink>
       </nav>
       <nav className="nav-login">
@@ -72,6 +77,7 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faUser} className="nav-icon" />
               <span>{name}</span>
             </NavLink>
+
             <button className="logout-button" onClick={handleLogout}>
               <FontAwesomeIcon icon={faSignOutAlt} />
               <span> Log Out</span>
