@@ -26,6 +26,7 @@ function Form() {
       name: name,
       email: email,
       password: password,
+      signupTime: new Date().toISOString(),
     };
 
     // Add the new user to the existing list of users
