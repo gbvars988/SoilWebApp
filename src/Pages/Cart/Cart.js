@@ -33,23 +33,25 @@ function Cart() {
 
   return (
     <div className="cart-bg">
-      <div>
+      <div className="cart-container">
         <h1>Shopping Cart</h1>
+        <div className="cart-items">
+          {specials.map((special) => {
+            if (cartItems[special.id] !== 0) {
+              return <CartItem special={special} />;
+            }
+          })}
+          <div className="cart-total">
+            <p>Subtotal: ${subtotal.toFixed(2)}</p>
+            <button className="checkout" onClick={handleContinueShopping}>
+              Continue Shopping
+            </button>
+            <button className="checkout" onClick={handleCheckout}>
+              Checkout
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="cart-items">
-        {specials.map((special) => {
-          if (cartItems[special.id] !== 0) {
-            return <CartItem special={special} />;
-          }
-        })}
-      </div>
-      <p>Subtotal: ${subtotal.toFixed(2)}</p>
-      <button className="checkout" onClick={handleContinueShopping}>
-        Continue Shopping
-      </button>
-      <button className="checkout" onClick={handleCheckout}>
-        Checkout
-      </button>
     </div>
   );
 }
