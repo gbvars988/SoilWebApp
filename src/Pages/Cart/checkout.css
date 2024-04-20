@@ -1,6 +1,6 @@
 .checkout-bg {
   display: flex;
-  background-color: var(--celadon);
+  background-color: var(--brown);
   height: 83.5vh;
   width: auto;
   flex-direction: column;
@@ -8,9 +8,9 @@
   align-items: center;
 }
 
-h1 {
+.cart-container h1 {
   font-size: 4em;
-  color: black;
+  color: var(--white);
   text-align: center;
   font-family: "Tilt Neon", sans-serif;
   padding: 2vh;
@@ -45,9 +45,8 @@ h1 {
 }
 
 .checkout-form input {
-  width: 200px;
-  height: 30px;
-  margin: 5px;
+  width: 15vw;
+  height: 5vh;
   border-radius: 8px;
   border: none;
 }
@@ -63,4 +62,15 @@ h1 {
   cursor: pointer;
   font-family: "Tilt Neon", sans-serif;
   font-size: 20px;
+}
+
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--maroon);
+  height: 70vh;
+  width: 70vw;
+  border-radius: 8px;
 }

@@ -78,6 +78,11 @@ const Navbar = () => {
               <span>{name}</span>
             </NavLink>
 
+            <NavLink to="/cart">
+              <FontAwesomeIcon icon={faShoppingCart} className="nav-icon" />
+              <span>Cart</span>
+            </NavLink>
+
             <button className="logout-button" onClick={handleLogout}>
               <FontAwesomeIcon icon={faSignOutAlt} />
               <span> Log Out</span>
@@ -93,10 +98,6 @@ const Navbar = () => {
             </NavLink>
           </>
         )}
-        <NavLink to="/cart">
-          <FontAwesomeIcon icon={faShoppingCart} className="nav-icon" />
-          <span>Cart</span>
-        </NavLink>
       </nav>
     </div>
   );

@@ -24,33 +24,36 @@ function CheckoutForm() {
 
   return (
     <div className="checkout-bg">
-      <h1>Checkout</h1>
-      <button className="back-button" onClick={handleBackToCart}>
-        Back to Cart
-      </button>
-      <div className="checkout-form">
-        <h2>Enter your payment details</h2>
-        <form onSubmit={handlePurchase}>
-          <input
-            type="text"
-            className="card-form"
-            placeholder="Credit Card Number (16 digits)"
-            value={cardNumber}
-            onChange={(e) => setCardNumber(e.target.value)}
-            pattern="\d{16}"
-            required
-          />
-          <input
-            type="text"
-            className="card-form"
-            placeholder="Expiry Date (MM/YY)"
-            value={expiry}
-            onChange={(e) => setExpiry(e.target.value)}
-            pattern="(0[1-9]|1[0-2])/[0-9]{2}"
-            required
-          />
-          <button type="submit">Complete Purchase</button>
-        </form>
+      <div className="checkout-container">
+        <h1>Checkout</h1>
+        <button className="back-button" onClick={handleBackToCart}>
+          Back to Cart
+        </button>
+
+        <div className="checkout-form">
+          <h2>Enter your payment details</h2>
+          <form onSubmit={handlePurchase}>
+            <input
+              type="text"
+              className="card-form"
+              placeholder="Credit Card Number (16 digits)"
+              value={cardNumber}
+              onChange={(e) => setCardNumber(e.target.value)}
+              pattern="\d{16}"
+              required
+            />
+            <input
+              type="text"
+              className="card-form"
+              placeholder="Expiry Date (MM/YY)"
+              value={expiry}
+              onChange={(e) => setExpiry(e.target.value)}
+              pattern="(0[1-9]|1[0-2])/[0-9]{2}"
+              required
+            />
+            <button type="submit">Complete Purchase</button>
+          </form>
+        </div>
       </div>
     </div>
   );
