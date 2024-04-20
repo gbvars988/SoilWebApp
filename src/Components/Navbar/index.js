@@ -10,6 +10,8 @@ import {
   faDollarSign,
   faShoppingCart,
   faUtensils,
+  faUser,
+  faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
@@ -24,10 +26,11 @@ const Navbar = () => {
     }
   }, []);
 
+  // Function to handle logout
   const handleLogout = () => {
     // Clear user data from local storage
     localStorage.removeItem("loggedInUser");
-    // Update login state
+    // Update login state and redirect to home page
     setIsLoggedIn(false);
     window.location.href = "/";
   };
@@ -66,10 +69,12 @@ const Navbar = () => {
         {isLoggedIn ? (
           <>
             <NavLink to="/profile">
-              <span>{name}'s Profile</span>
+              <FontAwesomeIcon icon={faUser} className="nav-icon" />
+              <span>{name}</span>
             </NavLink>
             <button className="logout-button" onClick={handleLogout}>
-              Log Out
+              <FontAwesomeIcon icon={faSignOutAlt} />
+              <span> Log Out</span>
             </button>
           </>
         ) : (

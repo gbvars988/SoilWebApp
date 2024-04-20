@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import UserPreferencesForm from "./UserPreferencesForm";
 import MealPlanDisplay from "./MealPlanDisplay";
 import useMealPlan from "./useMealPlan";
+import "./dietplan.css";
 
 function DietPlanPage() {
   const [timeFrame, setTimeFrame] = useState("day");
@@ -13,14 +14,16 @@ function DietPlanPage() {
   };
 
   return (
-    <div>
-      <h1>Diet Plan</h1>
-      <UserPreferencesForm onSubmit={handlePreferencesSubmit} />
-      {loading && <p>Loading...</p>}
-      {error && <p>Error: {error}</p>}
-      {mealPlan && (
-        <MealPlanDisplay mealPlan={mealPlan} timeFrame={timeFrame} />
-      )}
+    <div className="diet-bg">
+      <div className="diet-container">
+        <h1>Diet Plan</h1>
+        <UserPreferencesForm onSubmit={handlePreferencesSubmit} />
+        {loading && <p>Loading...</p>}
+        {error && <p>Error: {error}</p>}
+        {mealPlan && (
+          <MealPlanDisplay mealPlan={mealPlan} timeFrame={timeFrame} />
+        )}
+      </div>
     </div>
   );
 }

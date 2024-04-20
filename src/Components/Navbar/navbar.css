@@ -23,7 +23,8 @@ nav {
 
 .nav-login {
   display: flex;
-  width: 15%;
+  width: 16%;
+  height: auto;
   flex-direction: row;
 }
 
@@ -54,9 +55,18 @@ nav a:hover {
 }
 
 .logout-button {
-  background-color: var(--mantis);
-  border-radius: 15em;
-  width: 4vw;
+  background-color: var(--white);
+  border-radius: 1em;
+  border: none;
+  width: 20vw;
+  height: 4vh;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 800;
+  color: var(--forest-green);
+}
+
+.logout-button:hover {
+  background-color: var(--red);
 }
 
 @media screen and (max-width: 1000px) {

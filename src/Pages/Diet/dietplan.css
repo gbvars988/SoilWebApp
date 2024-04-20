@@ -1,0 +1,18 @@
+.diet-bg {
+  display: flex;
+  background-color: var(--brown);
+  justify-content: center;
+  align-items: center;
+  height: 81.5vh;
+}
+
+.diet-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 60vh;
+  background-color: var(--maroon);
+  border-radius: 3em;
+  flex-direction: column;
+}

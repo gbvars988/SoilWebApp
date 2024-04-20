@@ -1,7 +1,6 @@
 import React from "react";
 import "./login.css";
 import LoginValidation from "./LoginValidation";
-import { useNavigate } from "react-router-dom";
 import useForm from "./useForm";
 
 const LoginForm = () => {
@@ -9,14 +8,15 @@ const LoginForm = () => {
     login,
     LoginValidation
   );
-  const navigate = useNavigate();
 
+  // Function to handle login
   function login() {
     const users = JSON.parse(localStorage.getItem("users")) || [];
     const user = users.find(
       (user) => user.email === values.email && user.password === values.password
     );
 
+    // If a user is found in local storage, log them in and redirect to profile
     if (user) {
       localStorage.setItem("loggedInUser", JSON.stringify(user));
       window.location.href = "/profile";
