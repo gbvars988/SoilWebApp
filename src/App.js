@@ -14,27 +14,30 @@ import DietPlanPage from "./Pages/Diet/DietPlanPage.js";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import { CartProvider } from "./Pages/Cart/CartContext.js";
+import { AuthProvider } from "./Pages/Login/AuthContext.js";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <CartProvider>
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="home" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="deals" element={<Deals />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="login" element={<Login />} />
-          <Route path="signup" element={<Signup />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="checkout" element={<Checkout />} />
-          <Route path="purchasesummary" element={<PurchaseSummary />} />
-          <Route path="dietplan" element={<DietPlanPage />} />
-        </Routes>
-      </CartProvider>
+      <AuthProvider>
+        <CartProvider>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="home" element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="deals" element={<Deals />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="login" element={<Login />} />
+            <Route path="signup" element={<Signup />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="checkout" element={<Checkout />} />
+            <Route path="purchasesummary" element={<PurchaseSummary />} />
+            <Route path="dietplan" element={<DietPlanPage />} />
+          </Routes>
+        </CartProvider>
+      </AuthProvider>
       <Footer />
     </BrowserRouter>
   );

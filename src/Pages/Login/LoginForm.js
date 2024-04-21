@@ -2,12 +2,14 @@ import React from "react";
 import "./login.css";
 import LoginValidation from "./LoginValidation";
 import useForm from "./useForm";
+import { useAuth } from "./AuthContext.js";
 
 const LoginForm = () => {
   const { values, errors, handleChange, handleSubmit } = useForm(
     login,
     LoginValidation
   );
+  const { setLoggedIn } = useAuth();
 
   // Function to handle login
   function login() {
@@ -19,6 +21,7 @@ const LoginForm = () => {
     // If a user is found in local storage, log them in and redirect to profile
     if (user) {
       localStorage.setItem("loggedInUser", JSON.stringify(user));
+      setLoggedIn(true);
       window.location.href = "/profile";
     } else {
       alert("Please enter a valid Soil account email and password.");

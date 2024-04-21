@@ -51,13 +51,13 @@ const Navbar = () => {
           <span>About Us</span>
         </NavLink>
 
+        <NavLink to="/deals">
+          <FontAwesomeIcon icon={faDollarSign} className="nav-icon" />
+          <span>Organic Deals</span>
+        </NavLink>
+
         {isLoggedIn && (
           <>
-            <NavLink to="/deals">
-              <FontAwesomeIcon icon={faDollarSign} className="nav-icon" />
-              <span>Organic Deals</span>
-            </NavLink>
-
             <NavLink to="/dietplan">
               <FontAwesomeIcon icon={faUtensils} className="nav-icon" />
               <span>Diet Plan</span>
