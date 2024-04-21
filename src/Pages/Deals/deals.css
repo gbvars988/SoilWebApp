@@ -7,3 +7,67 @@
   background-color: var(--brown);
   padding: 2vh 0;
 }
+
+.garden-header {
+  background-color: var(--maroon);
+  border-radius: 20em;
+  padding: 1vh 2vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  border: 1em solid var(--yellow-green);
+}
+.garden-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 125vh;
+  width: 95%;
+  margin-top: 6vh;
+  background-image: url("../../Assets/gardening.jpeg");
+  border-radius: 1em;
+  border: 0.7em solid var(--yellow-green);
+}
+
+.garden-bg h1 {
+  font-size: 4em;
+  color: var(--yellow-green);
+  font-family: "Tilt Neon", sans-serif;
+  margin-top: 2vh;
+}
+.small-farming-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 90vh;
+  width: 55vw;
+  border-radius: 1em;
+  background-color: var(--maroon);
+  gap: 2rem;
+  padding: 2vh 2vw;
+  border: 0.7em solid var(--yellow-green);
+}
+
+.small-farming-info img {
+  height: 15vh;
+  width: 12vw;
+  border: 0.7em solid var(--yellow-green);
+  border-radius: 2em;
+  margin-left: 6vw;
+}
+
+.small-farming-info img:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+.small-farming-info h2 {
+  font-size: 2.5em;
+  color: var(--white);
+  text-align: center;
+  font-family: "Tilt Neon", sans-serif;
+  margin-left: -6vw;
+}
+
+.highlight {
+  color: var(--celadon);
+}

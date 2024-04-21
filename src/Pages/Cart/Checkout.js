@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import { useCart } from "./CartContext.js";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./checkout.css";
 
 function CheckoutForm() {
@@ -8,6 +8,10 @@ function CheckoutForm() {
   const [cardNumber, setCardNumber] = useState("");
   const [expiry, setExpiry] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const { state } = location;
+  const { subtotal } = state || { subtotal: 0 };
 
   const handlePurchase = (e) => {
     e.preventDefault();
@@ -26,6 +30,7 @@ function CheckoutForm() {
     <div className="checkout-bg">
       <div className="checkout-container">
         <h1>Checkout</h1>
+        <p>Subtotal: ${subtotal.toFixed(2)}</p>
         <button className="back-button" onClick={handleBackToCart}>
           Back to Cart
         </button>

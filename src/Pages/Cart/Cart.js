@@ -35,7 +35,7 @@ function Cart() {
   };
 
   const handleCheckout = () => {
-    navigate("/checkout");
+    navigate("/checkout", { state: { subtotal } }); // Pass subtotal as state
   };
 
   const handleClearCart = () => {
@@ -49,8 +49,10 @@ function Cart() {
         <div className="cart-items">
           {Object.values(cartItems).some((item) => item !== 0) ? (
             specials.map((special) => {
-              if (cartItems[special.id] !== 0) {
-                return <CartItem special={special} />;
+              if (special.id !== 0 && cartItems[special.id] !== 0) {
+                return <CartItem key={special.id} special={special} />;
+              } else {
+                return null;
               }
             })
           ) : (
@@ -73,5 +75,4 @@ function Cart() {
     </div>
   );
 }
-
 export default Cart;
