@@ -15,6 +15,7 @@ function DietPlanPage() {
 
   return (
     <div className="diet-bg">
+      <div className="diet-line"></div>
       <div className="diet-container">
         <h1>Diet Plan</h1>
         <UserPreferencesForm onSubmit={handlePreferencesSubmit} />

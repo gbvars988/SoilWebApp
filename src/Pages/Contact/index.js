@@ -7,6 +7,7 @@ function Contact() {
   return (
     <div>
       <div className="contact-bg">
+        <div className="contact-line"></div>
         <div className="contact-container">
           <h1>Contact</h1>
           <p>

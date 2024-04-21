@@ -3,7 +3,7 @@
   --fern-green: rgb(75, 127, 82);
   --mantis: rgb(125, 209, 129);
   --celadon: rgb(150, 232, 188);
-  --yellow-green: rgb(96, 179, 48);
+  --yellow-green: rgb(133, 247, 68);
   --forest-green: rgb(19, 138, 54);
   --orange: rgb(238, 118, 14);
   --white: rgb(253, 249, 249);
@@ -14,6 +14,7 @@
   --maroon: #8b5c5c;
   --red: rgb(207, 131, 131);
   --green2: hsl(86, 65%, 56%);
+  --line: linear-gradient(90deg, var(--yellow-green), var(--forest-green));
 }
 
 /* Fonts */

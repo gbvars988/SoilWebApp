@@ -79,6 +79,7 @@ const Profile = () => {
 
   return (
     <div className="profile-bg">
+      <div className="profile-line"></div>
       <div className="profile-container">
         {userData && (
           <div className="profile-info">
