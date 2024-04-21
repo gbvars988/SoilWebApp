@@ -13,6 +13,7 @@ function CheckoutForm() {
   const { state } = location;
   const { subtotal } = state || { subtotal: 0 };
 
+  // Function to handle purchase
   const handlePurchase = (e) => {
     e.preventDefault();
     const outcome = makePurchase(cardNumber, expiry);
@@ -22,6 +23,7 @@ function CheckoutForm() {
     }
   };
 
+  // Function to navigate back to the cart
   const handleBackToCart = () => {
     navigate("/cart");
   };

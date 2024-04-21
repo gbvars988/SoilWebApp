@@ -8,6 +8,7 @@ function PurchaseSummary() {
   const [specials, setSpecials] = useState(getSpecials());
   const [totalAmount, setTotalAmount] = useState(0);
 
+  // Calculate subtotal
   useEffect(() => {
     const updateSubtotal = () => {
       let newTotal = 0;

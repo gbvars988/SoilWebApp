@@ -15,6 +15,7 @@ function Cart() {
     setSpecials(getSpecials());
   }, []);
 
+  // Calculate subtotal
   useEffect(() => {
     const updateSubtotal = () => {
       let newTotal = 0;
@@ -30,14 +31,17 @@ function Cart() {
     updateSubtotal();
   }, [cartItems, specials]);
 
+  // Navigate to the deals page
   const handleContinueShopping = () => {
     navigate("/deals");
   };
 
+  // Navigate to the checkout page
   const handleCheckout = () => {
     navigate("/checkout", { state: { subtotal } });
   };
 
+  // Clear the cart
   const handleClearCart = () => {
     clearCart();
   };

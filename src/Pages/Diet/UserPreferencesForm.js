@@ -79,7 +79,7 @@ function UserPreferencesForm({ onSubmit }) {
           <option value="extra active">Extra Active</option>
         </select>
       </div>
-      <div className="form-container">
+      <div>
         <div className="form-row">
           <label>Health Goals:</label>
           <div>

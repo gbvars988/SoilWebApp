@@ -11,9 +11,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40%;
-  height: 90vh;
-  margin-top: 5vh;
+  width: 20%;
+  height: 70vh;
+  margin-top: 2vh;
   padding: 2em;
   background-color: var(--maroon);
   border-radius: 3em;
@@ -24,18 +24,18 @@
 .diet-container h1 {
   color: var(--white);
   font-size: 2em;
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 
 .meal-plan-display {
   display: flex;
   align-items: center;
   flex-wrap: wrap-reverse;
-  width: 40%;
-  margin-top: 5vh;
+  width: 70%;
+  height: 50vh;
+  margin-top: 2vh;
   justify-content: center;
   margin-bottom: 10vh;
-  height: 60vh;
   background-color: var(--maroon);
   border: 0.4em solid var(--yellow-green);
   overflow: auto;

@@ -4,10 +4,6 @@ import "./dietplan.css";
 function MealPlanDisplay({ mealPlan, timeFrame }) {
   const [showMealPlan, setShowMealPlan] = useState(true);
 
-  const toggleMealPlanVisibility = () => {
-    setShowMealPlan(!showMealPlan);
-  };
-
   if (
     !mealPlan ||
     (timeFrame === "day" && (!mealPlan.meals || mealPlan.meals.length === 0)) ||
@@ -17,9 +13,6 @@ function MealPlanDisplay({ mealPlan, timeFrame }) {
     return (
       <div>
         <h1>Generate a meal plan now!</h1>
-        {mealPlan && (
-          <button onClick={toggleMealPlanVisibility}>Hide Meal Plan</button>
-        )}
       </div>
     );
   }
@@ -81,8 +74,6 @@ function MealPlanDisplay({ mealPlan, timeFrame }) {
               ))}
             </div>
           )}
-
-          <button onClick={toggleMealPlanVisibility}>Hide Meal Plan</button>
         </>
       )}
     </div>

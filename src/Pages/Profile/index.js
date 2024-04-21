@@ -111,7 +111,7 @@ const Profile = () => {
                 Update
               </button>
               <button className="delete-button" onClick={handleDeleteProfile}>
-                Delete Profile
+                Delete
               </button>
             </div>
           </div>
