@@ -25,6 +25,15 @@
   border-radius: 8px;
 }
 
+.cart-container h1 {
+  font-size: 4em;
+  color: var(--white);
+  text-align: center;
+  font-family: "Tilt Neon", sans-serif;
+  padding: 2vh;
+  margin-bottom: 2vh;
+}
+
 .cart-total {
   display: flex;
   justify-content: center;
