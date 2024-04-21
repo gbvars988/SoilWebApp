@@ -8,20 +8,27 @@ import "./cart.css";
 function Cart() {
   const [specials, setSpecials] = useState(getSpecials());
   const [subtotal, setSubtotal] = useState(0);
-  const { cartItems } = useCart();
+  const { cartItems, clearCart } = useCart();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    setSpecials(getSpecials());
+  }, []);
 
   useEffect(() => {
     const updateSubtotal = () => {
       let newTotal = 0;
       for (const id in cartItems) {
-        let item = specials.find((special) => special.id === Number(id));
-        newTotal += cartItems[id] * item.price;
+        const item = specials.find((special) => special.id === Number(id));
+        if (item) {
+          newTotal += cartItems[id] * item.price;
+        }
       }
-      return newTotal;
+      setSubtotal(newTotal);
     };
-    setSubtotal(updateSubtotal);
-  }, [cartItems]);
+
+    updateSubtotal();
+  }, [cartItems, setSpecials]);
 
   const handleContinueShopping = () => {
     navigate("/deals");
@@ -31,16 +38,24 @@ function Cart() {
     navigate("/checkout");
   };
 
+  const handleClearCart = () => {
+    clearCart();
+  };
+
   return (
     <div className="cart-bg">
       <div className="cart-container">
         <h1>Shopping Cart</h1>
         <div className="cart-items">
-          {specials.map((special) => {
-            if (cartItems[special.id] !== 0) {
-              return <CartItem special={special} />;
-            }
-          })}
+          {Object.values(cartItems).some((item) => item !== 0) ? (
+            specials.map((special) => {
+              if (cartItems[special.id] !== 0) {
+                return <CartItem special={special} />;
+              }
+            })
+          ) : (
+            <h2>Your cart is empty. Please add some items!</h2>
+          )}
           <div className="cart-total">
             <p>Subtotal: ${subtotal.toFixed(2)}</p>
             <button className="checkout" onClick={handleContinueShopping}>
@@ -48,6 +63,9 @@ function Cart() {
             </button>
             <button className="checkout" onClick={handleCheckout}>
               Checkout
+            </button>
+            <button className="checkout" onClick={handleClearCart}>
+              Clear Cart
             </button>
           </div>
         </div>

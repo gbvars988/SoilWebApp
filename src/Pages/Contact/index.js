@@ -22,7 +22,7 @@ function Contact() {
             <div className="contact-item">
               <img src={PhonePhoto} alt="phone" />
               <h2>Phone</h2>
-              <p> 123-456-7890 </p>
+              <p> +61 412-345-678 </p>
             </div>
           </div>
         </div>

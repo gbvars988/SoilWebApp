@@ -9,7 +9,7 @@ function Deals() {
   return (
     <div>
       <div className="deals-container">
-        <div>
+        <div className="weekly-specials">
           <WeeklySpecials specials={specials} />
         </div>
       </div>

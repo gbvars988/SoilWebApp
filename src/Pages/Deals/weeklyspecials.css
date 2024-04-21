@@ -1,17 +1,16 @@
 .specials-container-bg {
   background: var(--maroon);
-  height: 100vh;
+  height: 105vh;
   width: 80vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   border-radius: 4rem;
   flex-direction: column;
 }
 
 .specials-container-bg h1 {
-  font-size: 4em;
+  font-size: 3em;
   color: var(--white);
   text-align: center;
   font-family: "Tilt Neon", sans-serif;
@@ -23,8 +22,8 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   place-items: center;
   .addToCart-btn {
-    width: 150px;
-    height: 50px;
+    width: 10vw;
+    height: 5vh;
     background-color: var(--forest-green);
     color: white;
     border: none;
@@ -54,9 +53,20 @@
     font-weight: bold;
   }
   display: flex;
-  padding: 30px;
+  padding: 25px;
   background-color: var(--mantis);
   align-items: center;
   border-radius: 3em;
   flex-direction: column;
+  margin: 1vh;
+}
+
+.specials-item:hover {
+  background-color: var(--brown);
+  transform: scale(1.05);
+}
+
+.addToCart-btn:hover {
+  background-color: var(--maroon);
+  transform: scale(1.05);
 }
