@@ -12,6 +12,7 @@ import Pumpkin from "../../Assets/pumpkin.jpg";
 import Asparagus from "../../Assets/asparagus.jpg";
 import Modal from "./Modal";
 import { useCart } from "../Cart/CartContext.js";
+import { useAuth } from "../Login/AuthContext.js";
 
 function WeeklySpecials(props) {
   const imageMap = {
@@ -26,8 +27,8 @@ function WeeklySpecials(props) {
     pumpkin: Pumpkin,
     asparagus: Asparagus,
   };
+  const { isLoggedIn } = useAuth();
   const { addToCart, cartItems } = useCart();
-
   const [selectedItem, setSelectedItem] = useState(null);
 
   const handleItemClick = (item) => {
@@ -40,7 +41,11 @@ function WeeklySpecials(props) {
 
   const handleAddToCart = (e, itemId) => {
     e.stopPropagation();
-    addToCart(itemId);
+    if (!isLoggedIn) {
+      alert("Please log in or register to add items to the cart.");
+    } else {
+      addToCart(itemId);
+    }
   };
 
   return (
