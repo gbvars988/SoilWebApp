@@ -1,6 +1,39 @@
 .about-container {
   display: flex;
-  height: 83.5vh;
-  width: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100%;
   background-color: var(--celadon);
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  width: 85vw;
+  background-color: var(--brown);
+  flex-direction: column;
+  border-radius: 2em;
+  border: 0.4em solid var(--maroon);
+  padding: 2em;
+}
+
+.about-content img {
+  height: 40vh;
+  width: 80vw;
+  border: 0.4em solid var(--maroon);
+}
+
+.about-content h1 {
+  color: var(--white);
+  font-size: 3em;
+}
+
+.about-content h2 {
+  color: var(--white);
+  font-size: 1.6em;
+  gap: 2em;
 }

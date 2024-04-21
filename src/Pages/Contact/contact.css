@@ -16,12 +16,13 @@
   background-color: var(--brown);
   flex-direction: column;
   border-radius: 5em;
+  border: 0.4em solid var(--maroon);
 }
 
 .contact-container img {
   height: 15vh;
   width: 15vw;
-  border: 0.4em solid var(--celadon);
+  border: 0.4em solid var(--maroon);
 }
 
 .contact-container h1 {

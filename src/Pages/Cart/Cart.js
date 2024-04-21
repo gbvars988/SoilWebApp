@@ -19,7 +19,7 @@ function Cart() {
     const updateSubtotal = () => {
       let newTotal = 0;
       for (const id in cartItems) {
-        const item = specials.find((special) => special.id === Number(id));
+        let item = specials.find((special) => special.id === Number(id));
         if (item) {
           newTotal += cartItems[id] * item.price;
         }
@@ -28,14 +28,14 @@ function Cart() {
     };
 
     updateSubtotal();
-  }, [cartItems, setSpecials]);
+  }, [cartItems, specials]);
 
   const handleContinueShopping = () => {
     navigate("/deals");
   };
 
   const handleCheckout = () => {
-    navigate("/checkout", { state: { subtotal } }); // Pass subtotal as state
+    navigate("/checkout", { state: { subtotal } });
   };
 
   const handleClearCart = () => {
