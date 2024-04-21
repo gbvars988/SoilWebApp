@@ -15,15 +15,14 @@ function DietPlanPage() {
 
   return (
     <div className="diet-bg">
-      <div className="diet-line"></div>
       <div className="diet-container">
         <h1>Diet Plan</h1>
         <UserPreferencesForm onSubmit={handlePreferencesSubmit} />
         {loading && <p>Loading...</p>}
         {error && <p>Error: {error}</p>}
-        {mealPlan && (
-          <MealPlanDisplay mealPlan={mealPlan} timeFrame={timeFrame} />
-        )}
+      </div>
+      <div className="meal-plan-display">
+        <MealPlanDisplay mealPlan={mealPlan} timeFrame={timeFrame} />
       </div>
     </div>
   );

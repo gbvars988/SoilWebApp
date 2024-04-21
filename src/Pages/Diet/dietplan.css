@@ -3,7 +3,8 @@
   background-color: var(--brown);
   justify-content: center;
   align-items: center;
-  height: 83.5vh;
+  flex-direction: column;
+  height: 140vh;
 }
 
 .diet-container {
@@ -11,18 +12,114 @@
   justify-content: center;
   align-items: center;
   width: 40%;
-  height: 60vh;
+  height: 90vh;
+  margin-top: 5vh;
+  padding: 2em;
   background-color: var(--maroon);
   border-radius: 3em;
   flex-direction: column;
   border: 0.4em solid var(--yellow-green);
-  z-index: 2;
 }
 
-.diet-line {
-  width: 100%;
-  height: 40vh;
-  background-image: var(--line);
-  position: absolute;
-  z-index: 1;
+.diet-container h1 {
+  color: var(--white);
+  font-size: 2em;
+  margin-top: 1em;
+}
+
+.meal-plan-display {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  width: 70%;
+  margin-top: 5vh;
+  justify-content: center;
+  margin-bottom: 10vh;
+  height: 60vh;
+  background-color: var(--maroon);
+  border: 0.4em solid var(--yellow-green);
+  overflow: auto;
+}
+
+.meal-plan-display img {
+  max-width: 10vw;
+  max-height: 10vh;
+  object-fit: cover;
+}
+
+.meal-plan-display p {
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.meal-plan-display h2,
+.meal-plan-display h3 {
+  font-size: 1.7rem;
+  color: var(--yellow-green);
+}
+
+.user-preferences-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-preferences-form div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.user-preferences-form label {
+  font-weight: bold;
+}
+
+.user-preferences-form input,
+.user-preferences-form select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--brown);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--yellow-green);
+}
+
+.meal-plan-display::-webkit-scrollbar {
+  width: 1em;
+  border-radius: 1em;
+}
+
+.meal-plan-display::-webkit-scrollbar-track {
+  background-color: var(--white);
+}
+
+.meal-plan-display::-webkit-scrollbar-thumb {
+  background-color: var(--yellow-green);
+}
+
+.meal-plan-display {
+  scrollbar-width: thin;
+  scrollbar-color: var(--yellow-green) var(--maroon);
 }

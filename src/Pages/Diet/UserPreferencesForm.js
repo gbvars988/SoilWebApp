@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./dietplan.css";
 
 function UserPreferencesForm({ onSubmit }) {
   const [formData, setFormData] = useState({
@@ -35,7 +36,7 @@ function UserPreferencesForm({ onSubmit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="user-preferences-form" onSubmit={handleSubmit}>
       <div>
         <label>Age:</label>
         <input
@@ -78,98 +79,102 @@ function UserPreferencesForm({ onSubmit }) {
           <option value="extra active">Extra Active</option>
         </select>
       </div>
-      <div>
-        <label>Health Goals:</label>
-        <div>
-          <label>
-            <input
-              type="radio"
-              name="healthGoals"
-              value="weight loss"
-              checked={formData.healthGoals === "weight loss"}
-              onChange={handleChange}
-            />{" "}
-            Weight Loss
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="healthGoals"
-              value="muscle gain"
-              checked={formData.healthGoals === "muscle gain"}
-              onChange={handleChange}
-            />{" "}
-            Muscle Gain
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="healthGoals"
-              value="overall health"
-              checked={formData.healthGoals === "overall health"}
-              onChange={handleChange}
-            />{" "}
-            Overall Health
-          </label>
+      <div className="form-container">
+        <div className="form-row">
+          <label>Health Goals:</label>
+          <div>
+            <label>
+              <input
+                type="radio"
+                name="healthGoals"
+                value="weight loss"
+                checked={formData.healthGoals === "weight loss"}
+                onChange={handleChange}
+              />{" "}
+              Weight Loss
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="healthGoals"
+                value="muscle gain"
+                checked={formData.healthGoals === "muscle gain"}
+                onChange={handleChange}
+              />{" "}
+              Muscle Gain
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="healthGoals"
+                value="overall health"
+                checked={formData.healthGoals === "overall health"}
+                onChange={handleChange}
+              />{" "}
+              Overall Health
+            </label>
+          </div>
         </div>
-      </div>
-      <div>
-        <label>Dietary Preferences:</label>
-        <div>
-          <label>
-            <input
-              type="checkbox"
-              name="dietaryPreferences"
-              value="vegetarian"
-              checked={formData.dietaryPreferences.includes("vegetarian")}
-              onChange={handleChange}
-            />{" "}
-            Vegetarian
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="dietaryPreferences"
-              value="vegan"
-              checked={formData.dietaryPreferences.includes("vegan")}
-              onChange={handleChange}
-            />{" "}
-            Vegan
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="dietaryPreferences"
-              value="gluten-free"
-              checked={formData.dietaryPreferences.includes("gluten-free")}
-              onChange={handleChange}
-            />{" "}
-            Gluten-Free
-          </label>
+        <div className="form-row">
+          <label>Dietary Preferences:</label>
+          <div>
+            <label>
+              <input
+                type="checkbox"
+                name="dietaryPreferences"
+                value="vegetarian"
+                checked={formData.dietaryPreferences.includes("vegetarian")}
+                onChange={handleChange}
+              />{" "}
+              Vegetarian
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="dietaryPreferences"
+                value="vegan"
+                checked={formData.dietaryPreferences.includes("vegan")}
+                onChange={handleChange}
+              />{" "}
+              Vegan
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="dietaryPreferences"
+                value="gluten-free"
+                checked={formData.dietaryPreferences.includes("gluten-free")}
+                onChange={handleChange}
+              />{" "}
+              Gluten-Free
+            </label>
+          </div>
         </div>
-      </div>
-      <div>
-        <label>Time Frame:</label>
-        <label>
-          <input
-            type="radio"
-            name="timeFrame"
-            value="day"
-            checked={formData.timeFrame === "day"}
-            onChange={handleChange}
-          />
-          Day
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="timeFrame"
-            value="week"
-            checked={formData.timeFrame === "week"}
-            onChange={handleChange}
-          />
-          Week
-        </label>
+        <div className="form-row">
+          <label>Time Frame:</label>
+          <div>
+            <label>
+              <input
+                type="radio"
+                name="timeFrame"
+                value="day"
+                checked={formData.timeFrame === "day"}
+                onChange={handleChange}
+              />
+              Day
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="timeFrame"
+                value="week"
+                checked={formData.timeFrame === "week"}
+                onChange={handleChange}
+              />
+              Week
+            </label>
+          </div>
+        </div>
       </div>
       <button type="submit">Get Meal Plan</button>
     </form>
