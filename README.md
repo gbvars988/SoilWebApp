@@ -1,5 +1,3 @@
-https://github.com/rmit-fsd-2024-s1/s3780694-s3436258-a1
-
 # SOIL WebApp
 
 SOIL is a long-term organic food grocer with several store locations around Melbourne, Australia. They focus on premium, organic fresh food. This WebApp serves as SOIL's online presence, allowing customers to shop online, learn about organic produce with tips and tricks, and create customised meal plans based on preferences and dietary requirements.
